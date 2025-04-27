@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <title>Nos produits - YourSwissPC</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Nos produits</h1>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="produits.html">Nos produits</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+      
+    <section class="fiche-produit">
+        <div class="fiche-container split-layout">
+      
+          <!-- SLIDER A GAUCHE -->
+          <div class="fiche-slider">
+            <div class="slider-container">
+              <div class="slider" id="slider1"> <!--changer le slider ici-->
+                <img src="images/produit/build2/buildimage1.jpg" alt="PC 1" />
+                <img src="images/produit/build2/buildimage2.jpg" alt="PC 2" />
+                <img src="images/produit/build2/buildimage3.jpg" alt="PC 3" />
+                <img src="images/produit/build2/buildimage4.jpg" alt="PC 4" />
+              </div>
+              <button class="slider-btn left" onclick="scrollSlider('slider1', -1)">‹</button> <!--changer le slider ici-->
+              <button class="slider-btn right" onclick="scrollSlider('slider1', 1)">›</button> <!--changer le slider ici-->
+              
+            </div>
+          </div>
+      
+<script>
+function scrollSlider(sliderId, direction) {
+  const slider = document.getElementById(sliderId);
+  const scrollAmount = slider.offsetWidth;
+  slider.scrollBy({
+    left: direction * scrollAmount,
+    behavior: 'smooth'
+  });
+}
+
+function toggleDetails(button) {
+  const details = button.previousElementSibling;
+  if (details.style.display === "none" || details.style.display === "") {
+    details.style.display = "block";
+    button.textContent = "Voir moins";
+  } else {
+    details.style.display = "none";
+    button.textContent = "Voir plus";
+  }
+}
+</script>
+
+      
+          <!-- INFOS A DROITE COMPOSANTS-->
+          <div class="fiche-details">
+            <h1>Night Lightning</h1>
+            <p class="slogan">"Lorsque que l'estéthique s'allie aux perfomances"</p>
+      
+            <ul class="composants">
+              <li><strong>CPU :</strong> AMD Ryzen 5 5600</li>
+              <li><strong>GPU :</strong> AMD Radeon RX 5700 XT</li>
+              <li><strong>RAM :</strong> Kllisre 2x8 Go DDR4</li>
+              <li><strong>Stockage :</strong> Huadisk 512go NVMe</li>
+            </ul>
+            
+            <div class="extra-details" id="extraDetails" class="details-supplementaires">
+              <ul class="composants">
+                <li><strong>Carte mère :</strong> AsRock B550M-HDV</li>
+                <li><strong>Boîtier :</strong> Thermlatake 170tg Black </li>
+                <li><strong>Alimentation :</strong> Thermaltake smart BX3 550w +80 gold </li>
+                <li><strong>Refroidissement :</strong> Noctua NH9-US Chromax Black</li>
+              </ul>
+            </div>
+            <button id="toggleBtn" class="toggleDetailsBtn">
+                Voir plus <span class="arrow">▼</span>
+              </button>
+              
+      
+             <div class="benchmarks">
+              <h3>Benchmarks</h3>
+                <div class="voir-tests"> <a href="https://www.youtube.com/watch?v=253gSRv_FSI&t=2037s" target="_blank">
+                     Voir les tests sur YouTube (Ultra & High settings)
+                </a></div>
+            </div>
+              
+      
+            <div class="prix-contact">
+              <h2>Prix : 670 chf</h2>
+              <a href="contact.html" class="btn-contact">Me contacter</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="fiche-produit">
+        <div class="fiche-container split-layout">
+      
+          <!-- SLIDER A GAUCHE -->
+          <div class="fiche-slider">
+            <div class="slider-container">
+              <div class="slider" id="slider2"> <!--changer le slider ici-->
+                <img src="images/produit/build1/buildimage1.jpg" alt="PC 1" />
+                <img src="images/produit/build1/buildimage2.jpg" alt="PC 2" />
+                <img src="images/produit/build1/buildimage3.jpg" alt="PC 3" />
+                <img src="images/produit/build1/buildimage4.jpg" alt="PC 4" />
+                <img src="images/produit/build1/buildimage5.jpg" alt="PC 4" />
+                <img src="images/produit/build1/buildimage6.jpg" alt="PC 4" />
+              </div>
+              <button class="slider-btn left" onclick="scrollSlider('slider2', -1)">‹</button> <!--changer le slider ici-->
+              <button class="slider-btn right" onclick="scrollSlider('slider2', 1)">›</button> <!--changer le slider ici-->
+              
+            </div>
+          </div>
+      
+          <script>
+            function scrollSlider(sliderId, direction) {
+              const slider = document.getElementById(sliderId);
+              const scrollAmount = slider.offsetWidth;
+              slider.scrollBy({
+                left: direction * scrollAmount,
+                behavior: 'smooth'
+              });
+            }
+            
+            function toggleDetails(button) {
+              const details = button.previousElementSibling;
+              if (details.style.display === "none" || details.style.display === "") {
+                details.style.display = "block";
+                button.textContent = "Voir moins";
+              } else {
+                details.style.display = "none";
+                button.textContent = "Voir plus";
+              }
+            }
+            </script>
+      
+          <!-- INFOS A DROITE COMPOSANTS-->
+          <div class="fiche-details">
+            <h1>Icy Frost</h1>
+            <p class="slogan">"Le haut de gamme pour une bouchée de pain "</p>
+      
+            <ul class="composants">
+              <li><strong>CPU :</strong> AMD Ryzen 5 5600</li>
+              <li><strong>GPU :</strong> NVIDIA RTX 4070 </li>
+              <li><strong>RAM :</strong> Kllisre 2x8 Go DDR4</li>
+              <li><strong>Stockage :</strong> Kingspec 512go NVMe</li>
+            </ul>
+            
+            <div class="extra-details" id="extraDetails1" class="details-supplementaires">
+              <ul class="composants">
+                <li><strong>Carte mère :</strong> ASUS PRIME B450M-K II</li>
+                <li><strong>Boîtier :</strong> Xigmatek Alphard White </li>
+                <li><strong>Alimentation :</strong> Thermaltake smart BX3 550w +80 gold </li>
+                <li><strong>Refroidissement :</strong> UpHere 120mm Cpu Cooler White</li>
+              </ul>
+            </div>
+            <button id="toggleBtn1" class="toggleDetailsBtn">
+                Voir plus <span class="arrow">▼</span>
+              </button>
+              
+      
+             <div class="benchmarks">
+              <h3>Benchmarks</h3>
+                <div class="voir-tests"> <a href="https://www.youtube.com/watch?v=TxadJ2s1Yuc" target="_blank">
+                     Voir les tests sur YouTube
+                </a></div>
+            </div>
+              
+      
+            <div class="prix-contact">
+              <h2>Prix : 960 chf</h2>
+              <a href="contact.html" class="btn-contact">Me contacter</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const btn = document.getElementById("toggleBtn1");
+          const details = document.getElementById("extraDetails1");
+      
+          btn.addEventListener("click", () => {
+            const isOpen = details.classList.toggle("open");
+      
+            // Texte du bouton
+            btn.textContent = isOpen ? "Voir moins" : "Voir plus";
+      
+            // Remet la flèche
+            const arrow = document.createElement("span");
+            arrow.classList.add("arrow");
+            arrow.textContent = "▼";
+            if (isOpen) arrow.style.transform = "rotate(180deg)";
+            btn.appendChild(arrow);
+      
+            // Ajoute la classe open pour l'animation CSS
+            if (isOpen) {
+              btn.classList.add("open");
+            } else {
+              btn.classList.remove("open");
+            }
+      
+            // Bouton en dessous de la liste
+            if (isOpen) {
+              details.parentNode.insertBefore(btn, details.nextSibling);
+            }
+          });
+        });
+      </script>
+            <script>
+              document.addEventListener("DOMContentLoaded", function () {
+                const btn = document.getElementById("toggleBtn"); //modifier la valeur "toggleBtn" avec celui des Id de la description
+                const details = document.getElementById("extraDetails"); //modifier la valeur "extraDetails" avec celui des Id de la description
+            
+                btn.addEventListener("click", () => {
+                  const isOpen = details.classList.toggle("open");
+            
+                  // Texte du bouton
+                  btn.textContent = isOpen ? "Voir moins" : "Voir plus";
+            
+                  // Remet la flèche
+                  const arrow = document.createElement("span");
+                  arrow.classList.add("arrow");
+                  arrow.textContent = "▼";
+                  if (isOpen) arrow.style.transform = "rotate(180deg)";
+                  btn.appendChild(arrow);
+            
+                  // Ajoute la classe open pour l'animation CSS
+                  if (isOpen) {
+                    btn.classList.add("open");
+                  } else {
+                    btn.classList.remove("open");
+                  }
+            
+                  // Bouton en dessous de la liste
+                  if (isOpen) {
+                    details.parentNode.insertBefore(btn, details.nextSibling);
+                  }
+                });
+              });
+            </script>
+      
+      
+      
+      <footer>
+        <p>&copy; 2025 YourSwissPC</p>
+      </footer>
+    </body>
+
+        
+   
+
+
+
+
+    
+
+
+
+
+
+
+</body>
