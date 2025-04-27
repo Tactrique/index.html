@@ -1029,9 +1029,9 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #33322f;
   line-height: 1.6;
-  background: linear-gradient(120deg, #5a5959, #1b2831, #243a2e);
+  background: linear-gradient(120deg, #afa9a4, #456b86, #243a2e);
   background-size: 400% 400%;
-  animation: gradientBackground 20s ease infinite;
+  animation: gradientBackground 10s ease infinite;
   color: #111;
 
 }
@@ -1051,6 +1051,11 @@ body {
     .split-layout {
       flex-direction: column;
       align-items: center;
+      .fiche-slider img {
+        max-height: 300px;
+        object-fit: contain;
+      }
+
     }
   
     .fiche-slider,
@@ -1060,7 +1065,9 @@ body {
   
     .fiche-slider img {
       width: 100%;
-      height: auto;
+      height:auto;
+      object-fit: cover;
+
     }
   
     .toggleDetailsBtn {
