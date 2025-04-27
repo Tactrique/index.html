@@ -1048,54 +1048,49 @@ body {
 
   }
 /* Mobile First : jusqu'à 768px */
+/* Adaptation mobile totale */
 @media (max-width: 768px) {
+  
   .split-layout {
-    flex-direction: column; /* empile verticalement */
+    display: flex;
+    flex-direction: column;
     align-items: center;
     width: 100%;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
   }
-
-  .fiche-slider,
-  .fiche-details {
-    width: 90%;
-    text-align: center;
-  }
-
+  
   .fiche-slider {
     width: 100%;
     max-width: 100%;
     overflow: hidden;
-    padding: 0;
-    box-sizing: border-box;
   }
-
+  
   .fiche-slider img {
     width: 100%;
     height: auto;
-    object-fit: contain;
     display: block;
+    object-fit: contain;
   }
 
+  .fiche-details {
+    width: 90%;
+    padding: 1rem;
+    box-sizing: border-box;
+    text-align: center;
+  }
   .toggleDetailsBtn {
     width: 100%;
+  }  
+}
+  /* Si besoin : corrige tout débordement de la page entière */
+  body, html {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
   }
-}
-body, html {
-  width: 100%;
-  overflow-x: hidden;
-}
-
-
-/* Desktop (au dessus de 768px) */
-.fiche-slider img {
-  width: 100%;
-  height: auto;
-  object-fit: cover; /* Cover pour desktop : les images remplissent les cartes */
-}
-
 
 
 
