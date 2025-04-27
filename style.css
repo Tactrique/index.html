@@ -1062,6 +1062,7 @@ body {
   .fiche-slider img {
     width: 100%;
     height: auto;
+    max-height: 500px;
     object-fit: contain; /* Contain sur mobile pour éviter que ça coupe */
   }
 
