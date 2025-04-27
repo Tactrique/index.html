@@ -1052,18 +1052,16 @@ body {
   .split-layout {
     flex-direction: column;
     align-items: center;
-    object-fit: contain;
   }
   
   .fiche-slider,
   .fiche-details {
-    width: 50%;
+    width: 90%;
   }
 
   .fiche-slider img {
     width: 100%;
     height: auto;
-    max-height: 300px;
     object-fit: contain; /* Contain sur mobile pour éviter que ça coupe */
   }
 
