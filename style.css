@@ -1048,55 +1048,7 @@ body {
 
   }
 /* Mobile First : jusqu'à 768px */
-/* Adaptation mobile totale */
-@media  (max-width: 767px) {
-  
-  .split-layout {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
-  .fiche-container {
-    flex-direction: column;
-    align-items: center;
-  }
-  .fiche-slider {
-    width: justify;
-    max-width: justify;
-    overflow: hidden;
-    margin-left: 10px;
-    margin-top: 10px;
-  }
-  .slider-container {
-    width: 100%;
-    max-width: 100%;
-  }
-  .slider-container img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-  }
-}
-  .fiche-slider img {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: contain;
-  }
 
-  .fiche-details {
-    width: 90%;
-    padding: 1rem;
-    box-sizing: border-box;
-    text-align: center;
-  }
-  .toggleDetailsBtn {
-    width: 100%;
-  }  
 
   /* Si besoin : corrige tout débordement de la page entière */
   body, html {
