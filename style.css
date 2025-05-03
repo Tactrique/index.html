@@ -502,44 +502,30 @@ body.page-produits .gradient-background {
 /* Layout général */
 
 .fiche-produit {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 50vh;
-  padding: 4rem 2rem;
-  background-color: #f9f9f9;
+  padding: 20px;
 }
 
 /* Container global */
 .fiche-container {
   display: flex;
-  max-width: 1200px;
-  width: 100%;
-  gap: 3rem;
-  background: white;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-  border-radius: 20px;
-  overflow: hidden;
-  background-color: #ffffff; /* ou une autre couleur foncée */
-  opacity: 1 !important;
-  z-index: 2;
-  position: relative;
+  justify-content: space-between;
+  gap: 20px;
 }
 
 /* SLIDER à gauche */
 .fiche-slider {
   flex: 1;
-  max-width: 60%;
-  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .slider-container {
-  width: 1200px;
-  height: 600px; /* ↖️ tu peux augmenter ici */
   position: relative;
+  width: 100%;
+  max-width: 500px;
   overflow: hidden;
-  border-radius: 20px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 10p
 }
 
 
@@ -558,6 +544,12 @@ body.page-produits .gradient-background {
   border-radius: 20px;
 }
 
+.slider-container img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
 
 
 
@@ -566,14 +558,11 @@ body.page-produits .gradient-background {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(255, 255, 255, 0.7);
   border: none;
-  color: white;
   font-size: 2rem;
-  padding: 0.4rem 0.8rem;
   cursor: pointer;
-  z-index: 2;
-  border-radius: 50%;
+  z-index: 10;
 }
 
 .slider-btn.left {
@@ -1050,39 +1039,23 @@ body {
 /* Mobile First : jusqu'à 768px */
 /* Adaptation mobile totale */
 @media (max-width: 768px) {
-  
-  .split-layout {
-    display: flex;
+  .fiche-container {
     flex-direction: column;
     align-items: center;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
-  
-  .fiche-slider {
-    width: 100%;
-    max-width: 100%;
-    overflow: hidden;
-  }
-  
-  .fiche-slider img {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: contain;
   }
 
-  .fiche-details {
-    width: 90%;
-    padding: 1rem;
-    box-sizing: border-box;
-    text-align: center;
-  }
-  .toggleDetailsBtn {
+  .fiche-slider {
     width: 100%;
-  }  
+  }
+
+  .slider-container {
+    max-width: 100%;
+  }
+
+  .slider-container img {
+    object-fit: contain;
+    max-height: 300px;
+  }
 }
   /* Si besoin : corrige tout débordement de la page entière */
   body, html {
