@@ -1049,7 +1049,7 @@ body {
   }
 /* Mobile First : jusqu'à 768px */
 /* Adaptation mobile totale */
-@media (max-width: 768px) {
+@media screen and (max-width: 767px) {
   
   .split-layout {
     display: flex;
@@ -1062,9 +1062,8 @@ body {
   }
   
   .fiche-slider {
-    width: 100%;
-    max-width: 100%;
-    overflow: hidden;
+    min-height: unset !important;
+    margin-top: 5vh;
   }
   
   .fiche-slider img {
