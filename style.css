@@ -1049,7 +1049,7 @@ body {
   }
 /* Mobile First : jusqu'à 768px */
 /* Adaptation mobile totale */
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
   
   .split-layout {
     display: flex;
