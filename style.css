@@ -1065,8 +1065,8 @@ body {
     align-items: center;
   }
   .fiche-slider {
-    width: 100%;
-    max-width: 100%;
+    width: justify;
+    max-width: justify;
     overflow: hidden;
   }
   .slider-container {
