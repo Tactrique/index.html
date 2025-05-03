@@ -1057,11 +1057,7 @@ body {
     padding: 0;
     overflow-x: hidden;
   }
-html, body {
-   overflow-x: hidden;
-   overscroll-behavior-y: none; /* évite le rebond ou les artefacts */
-   -webkit-overflow-scrolling: auto;
- }
+
   
 
 
