@@ -175,12 +175,97 @@ function toggleDetails(button) {
               
       
             <div class="prix-contact">
-              <h2>Prix : 930 chf</h2>
+              <h2>Prix : 899 chf</h2>
               <a href="contact.html" class="btn-contact">Me contacter</a>
             </div>
           </div>
         </div>
       </section>
+<!--3eme pc-->
+      <section class="fiche-produit">
+        <div class="fiche-container split-layout">
+      
+          <!-- SLIDER A GAUCHE -->
+          <div class="fiche-slider">
+            <div class="slider-container">
+              <div class="slider" id="slider3"> <!--changer le slider ici-->
+                <img src="images/produit/build3/buildimage1.jpg" alt="PC 1" />
+                <img src="images/produit/build3/buildimage2.jpg" alt="PC 2" />
+                <img src="images/produit/build3/buildimage3.jpg" alt="PC 3" />
+                <img src="images/produit/build3/buildimage4.jpg" alt="PC 4" />
+                <img src="images/produit/build3/buildimage5.jpg" alt="PC 3" />
+                <img src="images/produit/build3/buildimage6.jpg" alt="PC 4" />
+              </div>
+              <button class="slider-btn left" onclick="scrollSlider('slider3', -1)">‹</button> <!--changer le slider ici-->
+              <button class="slider-btn right" onclick="scrollSlider('slider3', 1)">›</button> <!--changer le slider ici-->
+              
+            </div>
+          </div>
+      
+<script>
+function scrollSlider(sliderId, direction) {
+  const slider = document.getElementById(sliderId);
+  const scrollAmount = slider.offsetWidth;
+  slider.scrollBy({
+    left: direction * scrollAmount,
+    behavior: 'smooth'
+  });
+}
+
+function toggleDetails(button) {
+  const details = button.previousElementSibling;
+  if (details.style.display === "none" || details.style.display === "") {
+    details.style.display = "block";
+    button.textContent = "Voir moins";
+  } else {
+    details.style.display = "none";
+    button.textContent = "Voir plus";
+  }
+}
+</script>
+
+      
+          <!-- INFOS A DROITE COMPOSANTS-->
+          <div class="fiche-details">
+            <h1>Snowy Surprise</h1>
+            <p class="slogan">"Entrée de gamme rhyme avec perfomances"</p>
+      
+            <ul class="composants">
+              <li><strong>CPU :</strong> AMD Ryzen 5 5500</li>
+              <li><strong>GPU :</strong> NVIDIA RTX 2070</li>
+              <li><strong>RAM :</strong> Kllisre 2x8 Go DDR4</li>
+              <li><strong>Stockage :</strong> Kingspec 512go NVMe</li>
+            </ul>
+            
+            <div class="extra-details" id="extraDetails2" class="details-supplementaires"><!-- CHANGER LE extradetails-->
+              <ul class="composants">
+                <li><strong>Carte mère :</strong> MACHINIST B450M</li>
+                <li><strong>Boîtier :</strong> Thermaltake 170tg White </li>
+                <li><strong>Alimentation :</strong> Be Quiet system power 10 450w </li>
+                <li><strong>Refroidissement :</strong> AMD stock cooler</li>
+              </ul>
+            </div>
+            <button id="toggleBtn2" class="toggleDetailsBtn"><!-- CHANGER LE TOGGLEBTN-->
+                Voir plus <span class="arrow">▼</span>
+              </button>
+              
+      
+             <div class="benchmarks">
+              <h3>Benchmarks</h3>
+                <div class="voir-tests"> <a href="https://www.youtube.com/watch?v=kQl4MoDr5Zc" target="_blank">
+                     Voir les tests sur YouTube (1080p)
+                </a></div>
+            </div>
+              
+      
+            <div class="prix-contact">
+              <h2>Prix : 549 chf</h2>
+              <a href="contact.html" class="btn-contact">Me contacter</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--fin 3eme pc, penser a copier le script a la fin-->
       
       <script>
         document.addEventListener("DOMContentLoaded", function () {
@@ -218,6 +303,38 @@ function toggleDetails(button) {
               document.addEventListener("DOMContentLoaded", function () {
                 const btn = document.getElementById("toggleBtn"); //modifier la valeur "toggleBtn" avec celui des Id de la description
                 const details = document.getElementById("extraDetails"); //modifier la valeur "extraDetails" avec celui des Id de la description
+            
+                btn.addEventListener("click", () => {
+                  const isOpen = details.classList.toggle("open");
+            
+                  // Texte du bouton
+                  btn.textContent = isOpen ? "Voir moins" : "Voir plus";
+            
+                  // Remet la flèche
+                  const arrow = document.createElement("span");
+                  arrow.classList.add("arrow");
+                  arrow.textContent = "▼";
+                  if (isOpen) arrow.style.transform = "rotate(180deg)";
+                  btn.appendChild(arrow);
+            
+                  // Ajoute la classe open pour l'animation CSS
+                  if (isOpen) {
+                    btn.classList.add("open");
+                  } else {
+                    btn.classList.remove("open");
+                  }
+            
+                  // Bouton en dessous de la liste
+                  if (isOpen) {
+                    details.parentNode.insertBefore(btn, details.nextSibling);
+                  }
+                });
+              });
+            </script>
+             <script>
+              document.addEventListener("DOMContentLoaded", function () {
+                const btn = document.getElementById("toggleBtn2"); //modifier la valeur "toggleBtn" avec celui des Id de la description
+                const details = document.getElementById("extraDetails2"); //modifier la valeur "extraDetails" avec celui des Id de la description
             
                 btn.addEventListener("click", () => {
                   const isOpen = details.classList.toggle("open");
